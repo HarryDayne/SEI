@@ -1,0 +1,23 @@
+{
+  "name": "sei",
+  "version": "1.0.0",
+  "description": "Repost ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarryDayne/SEI.git"
+  },
+  "author": "Harikaran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HarryDayne/SEI/issues"
+  },
+  "homepage": "https://github.com/HarryDayne/SEI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
