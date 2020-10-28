@@ -19,5 +19,6 @@ app.post('/api',(req,res)=>{
     process.stdout.on('data', function(data) { 
         console.log(data.toString()); 
     } );
+    res.end();
 })
 
