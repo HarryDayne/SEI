@@ -1,16 +1,22 @@
 console.log("This works");
-function senddata(){
-    console.log('Button clicked')
-    var i=document.getElementById('in');
-    var d=i.value;
-    console.log(d);
-    var data={d};
-    const options={
-        method:'POST',
-        headers: {
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify(data)
-    };
-    fetch('/api',options)
+
+
+function up(event){
+   console.log("Image uploaded");
+   var ia = document.getElementById('uploadedimage');
+   const files = event.target.files
+  const formData = new FormData()
+  formData.append('myFile', files[0])
+
+  fetch('/saveImage', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.path)
+  })
+  .catch(error => {
+    console.error(error)
+  })
 }
