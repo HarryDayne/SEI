@@ -14,4 +14,10 @@ var server = app.listen(port, ()=> {
 
 app.post('/api',(req,res)=>{
     console.log(req.body.d);
+    var spawn = require("child_process").spawn;
+    var process = spawn('python',["./hello.py"] );
+    process.stdout.on('data', function(data) { 
+        console.log(data.toString()); 
+    } );
 })
+
